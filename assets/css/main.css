@@ -1,0 +1,338 @@
+/*
+  The Name:Cravings Cafe HTML Tplate
+  Author: 
+  Support: 
+  Description: Creative  HTML5 tplate.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1.default css
+-----------------------------------
+*/
+
+
+/* default css start */
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+/* font family */
+.tk-baskervville{
+  font-family: "Baskervville", serif;
+}
+
+body {
+  color:#000000;
+  font-family: "Aktiv grotesk" , sans-serif ;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+/* lenis */
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color: #000;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.bg-fix {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mb-p p:last-child{
+  margin-bottom: 0;
+}
+/* container */
+.container {
+	max-width: 1368px;
+}
+
+/* heading  style*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #7A8B8D;
+	font-weight: 400;
+	line-height: 1.2;
+  font-family: "Baskervville", serif;
+}
+
+h1 {
+	font-size: 55px;
+}
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 28px;
+}
+
+h5 {
+	font-size: 24px;
+}
+
+h6 {
+	font-size: 20px;
+}
+
+/* all button */
+.tammy-btn{
+  color:#FFF;
+  font-family: "Aktiv grotesk" , sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  background-color: #30B0C7;
+  padding: 12px 24px;
+  border: 1px solid #30B0C7;
+  transition: all 0.3s linear;
+}
+.tammy-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.read-btn{
+  color:#000;
+  font-family: "Aktiv grotesk" , sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+.read-btn.active ,
+.read-btn:hover{
+  color:#30B0C7;
+}
+.read-btn svg ,
+.read-btn svg path{
+  transition: all 0.3s linear; 
+}
+.read-btn.active svg{
+  transform: rotate(-180deg);
+}
+.read-btn.active svg path,
+.read-btn:hover svg path{
+  fill:#30B0C7;
+}
+.show-content{
+  display: none;
+  height: auto;
+}
+/* default css start */
+
+
+/* header section start */
+.header-area{
+  padding: 12px 0;
+}
+/* header section end */
+
+/* banner section start */
+.banner-area{
+  min-height: 100vh;
+}
+.banner-caption{
+  padding-bottom: 134px;
+}
+.main-logo {
+  height: 272px;
+  width: 426px;
+  background-color: #FFFCFC;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.video-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* banner section end */
+
+/* dream beach section start */
+.popup-div{
+  padding-top: 40px;
+}
+.dream-beach-area {
+  padding: 19px 0 33px;
+}
+.dream-beach-area::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 576px);
+  width: 100%;
+  background-color: #FFFAF1;
+  z-index: -1;
+}
+.popup-div .row ,
+.dream-beach-area .row {
+  --bs-gutter-x: 102px;
+  --bs-gutter-y: 35px;
+}
+.dream-beach-img .tammy-btn{
+  margin-bottom: 19px;
+}
+.dream-beach-caption {
+  max-width: 506px;
+}
+.dream-beach-info p {
+  margin-bottom: 20px;
+}
+.dream-beach-info {
+  margin-bottom: 80px;
+}
+.dream-beach-button h2 {
+  max-width: 300px;
+}
+/* dream beach section end */
+
+/* gallery section start  */
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  height: 100%;
+}
+.gallery-wrapper .gallery-img:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / -1;
+}
+.gallery-wrapper.gallery-reverse .gallery-img:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.gallery-wrapper.gallery-reverse .gallery-img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+.gallery-wrapper .gallery-img img {
+  height: 100%;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery-section-area{
+  padding: 100px 0;
+}
+/* gallery section end */
+
+/* content block  section start */
+
+.content-block-info h2 {
+  color: #5D7679;
+  font-size: 64px;
+  max-width: 800px;
+}
+/* content block  section end  */
+
+
+/* review section start */
+.author-img img{
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+.author-name {
+  color: #000;
+}
+.verified-caption {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.author-information {
+  max-width: 280px;
+}
+
+.review-icon-wrapper{
+  margin: 20px 0 10px;
+}
+.review-content-info h4 {
+  color: #000;
+}
+.about-review-caption ,
+.review-content-info p {
+  font-size: 18px;
+	color: #7A8B8D;
+}
+.review-content-info .read-btn{
+  margin-top: 12px;
+}
+.review-inner-content {
+  max-height: 60px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.about-review-caption {
+  font-size: 14px;
+}
+.review-info {
+  margin-bottom: 35px;
+}
+.review-info:last-child{
+  margin-bottom: 0;
+}
+/* review section end */
+
+/* booking content section start */
+.booking-content-area{
+  padding: 82px 0;
+}
+.booking-content-info {
+  max-width: 350px;
+}
+.booking-content-info .tammy-btn {
+  margin-top: 10px;
+}
+.dream-beach-area.booking-content-area::after{
+  bottom: auto;
+  height: calc(100% - 453px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* booking content section end */

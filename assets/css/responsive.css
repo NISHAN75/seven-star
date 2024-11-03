@@ -1,0 +1,183 @@
+/* 1400, 1199, 991, 767, 575, 480, 360, 320 */
+/* CSS Index
+-----------------------------------
+1.default css
+-----------------------------------
+*/
+/* min-width 1430 */
+@media (min-width: 1430px) {
+}
+/* max-width 1399 */
+@media (max-width: 1399.98px) {
+
+}
+/* max-width 1199 */
+@media (max-width: 1199.98px) { 
+    /* container */
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    /* dream beach section start */
+    .popup-div .row ,
+    .dream-beach-area .row {
+        --bs-gutter-x: 35px;
+    }
+    .dream-beach-caption {
+        max-width: 100%;
+    }
+    .dream-beach-button h2 {
+        max-width: 100%;
+    }
+    .dream-beach-area::after {
+        display: none;
+    }
+    .dream-beach-bg {
+        background: #FFFAF1;
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        padding: 70px 24px;
+    }
+    .dream-beach-area {
+        padding: 40px 0 0px;
+    }
+    .booking-content-info {
+        max-width: calc(100% + 48px);
+    }
+    /* dream beach section end */
+}
+/* max-width 1399 - min-width 992*/
+@media (max-width: 1199.98px) and (min-width: 992px) {
+}
+/* max-width 991 */
+@media (max-width: 991.98px) {
+
+    /* heading */
+    h1 {
+        font-size: 48px;
+    }
+    .content-block-info h2 ,
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 32px;
+    }
+    
+    h4 {
+        font-size: 24px;
+    }
+    
+    h5 {
+        font-size: 20px;
+    }
+    
+    h6 {
+        font-size: 18px;
+    }
+    /* heading */
+
+    /* banner section start  */
+    .main-logo {
+        height: 200px;
+        width: 300px;
+    }
+    .main-logo img {
+        max-width: 200px;
+    }
+    
+    /* banner section start */
+    /* dream beach section start */
+    .dream-beach-button .tammy-btn {
+        margin-top: 10px;
+    }
+    .dream-beach-bg {
+        padding: 40px 24px;
+    }
+    .dream-beach-info {
+        margin-bottom: 50px;
+    }
+    /* dream beach section end */
+
+    /* gallery section start  */
+    .gallery-section-area {
+        padding: 50px 0px;
+    }
+    /* gallery section end  */
+
+    /* content block  section start */
+    .content-block-area {
+        padding-bottom: 0px;
+      }
+    /* content block  section end */
+   
+}
+/* max-width 767 */
+@media (max-width: 767.98px) { 
+
+    /* heading */
+    h1 {
+        font-size: 36px;
+    }
+    .content-block-info h2 ,
+    h2 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    /* heading */
+
+    /* gallery section start */
+    .gallery-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .gallery-wrapper.gallery-reverse .gallery-img:nth-child(1) ,
+    .gallery-wrapper.gallery-reverse .gallery-img:nth-child(2) ,
+    .gallery-wrapper .gallery-img:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .gallery-wrapper.gallery-reverse .gallery-img:nth-child(1){
+        grid-row: 1;
+    }
+    .gallery-wrapper.gallery-reverse .gallery-img:nth-child(2){
+        grid-row: 2;
+    }
+    .gallery-wrapper .gallery-img img {
+        height: 350px;
+    }
+    /* gallery section end  */
+
+}
+/* max-width 575 */
+@media (max-width: 575.98px) {
+
+  
+}
+/* max-width 479 */
+@media (max-width: 479.98px) {
+     /* gallery section start */
+    .gallery-wrapper .gallery-img img {
+        height: 250px;
+    }
+    /* gallery section end  */
+  
+}
+/* max-width 383 */
+@media (max-width: 383.98px) {
+  
+    /* banner section start  */
+    .main-logo {
+        width: 100%;
+    }
+
+    /* banner section start */
+}
