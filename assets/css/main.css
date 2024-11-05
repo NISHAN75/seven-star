@@ -32,15 +32,19 @@ body {
 html.lenis, html.lenis body {
   height: auto;
 }
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
@@ -226,7 +230,7 @@ h6 {
   margin-bottom: 80px;
 }
 .dream-beach-button h2 {
-  max-width: 300px;
+  max-width: 310px;
 }
 /* dream beach section end */
 
@@ -336,3 +340,14 @@ h6 {
   transform: translateY(-50%);
 }
 /* booking content section end */
+.trigger-parallax{
+  overflow: hidden;
+  position: relative;
+}
+.parallax-img {
+  height: calc(100% + 120px);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transform: translateY(0);
+}

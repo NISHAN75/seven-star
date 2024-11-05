@@ -74,6 +74,76 @@
     });
 
 
+
+    // testing
+    // Select all elements with the .text-animation class and loop through them
+    gsap.utils.toArray(".text-animation").forEach(text => {
+    
+        // Split text into lines, wrapping each line in a <span> tag with specific classes
+        const childSplit = new SplitText(text, {
+        type: "lines",
+        tag: "span",
+        linesClass: "split-child",
+        });
+        const parentSplit = new SplitText(text, {
+        type: "lines",
+        linesClass: "split-parent overflow-hidden"
+        });
+        // Animate each line when it enters the viewport with ScrollTrigger
+        gsap.from(childSplit.lines, {
+        y: '100%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power1.out',
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: text, 
+            start: "top 80%", 
+            toggleActions: "play none none none", 
+        }
+        });
+    });
+
+    	// Parallax Effect
+		$(window).on("load", function () {
+            const commitmentImg = $(".trigger-parallax");
+            if (commitmentImg.length) {
+              commitmentImg.each(function () {
+                const currentItem = $(this).find(".parallax-img");
+                const currentItemHeight = currentItem.height();
+                currentItem.parent().css("height", currentItemHeight);
+                currentItem.css("height", currentItemHeight + 120);
+                gsap.to(currentItem, {
+                  y: -120,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: currentItem[0],
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true,
+                  },
+                });
+              });
+            }
+          });
+
+
+
+
+    // testing
+
+    // Smooth scroll js
+	const lenis = new Lenis({
+        duration: 1.5,
+        normalizeWheel: true,
+    });
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    };
+    requestAnimationFrame(raf);
+
+
        
    });
 })(jQuery);
