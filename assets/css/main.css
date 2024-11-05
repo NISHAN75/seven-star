@@ -169,7 +169,7 @@ h6 {
 
 /* banner section start */
 .banner-area{
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
 }
 .banner-caption{
   padding-bottom: 134px;
@@ -264,6 +264,20 @@ h6 {
 .gallery-section-area{
   padding: 100px 0;
 }
+.trigger-parallax{
+  overflow: hidden;
+  position: relative;
+}
+.parallax-img {
+  height: calc(100% + 120px);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transform: translateY(0);
+}
+.popup-gallery{
+  display: none;
+}
 /* gallery section end */
 
 /* content block  section start */
@@ -340,14 +354,3 @@ h6 {
   transform: translateY(-50%);
 }
 /* booking content section end */
-.trigger-parallax{
-  overflow: hidden;
-  position: relative;
-}
-.parallax-img {
-  height: calc(100% + 120px);
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transform: translateY(0);
-}
